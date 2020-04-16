@@ -1,0 +1,133 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~jquery-ui/themes/base/all.css';
+
+.navbar-nav {
+  text-align: right;
+  font-size: 1.2rem;
+}
+
+/*calendar*/
+#calendar {
+    margin: 0 auto;
+    width: 90%;
+}
+#header {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.day, .date-block {
+    float: left;
+    width: calc(100% / 7);
+}
+
+#dates {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.date-block {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    padding: 4px;
+    height: 15vh;
+    overflow: auto;
+}
+.date-block.empty {
+    background-color: #eee;
+}
+
+.event {
+    margin: 2px;
+    padding:0 6px;
+    border-radius: 12px;
+    background: orange;
+    color: white;
+}
+.event .title {
+    float: left;
+}
+.event .from {
+    float: right;
+}
+
+
+/*info panel*/
+#info-panel {
+    display: none;
+    position: fixed;
+    width: 280px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+#info-panel.open {
+    display: block;
+}
+#info-panel .close {
+    top: 10px;
+    right: 10px;
+    position: relative;
+    cursor: pointer;
+}
+#info-panel label{
+    font-size: 0.8rem;
+    color: chocolate;
+}
+#info-panel .title, #info-panel .time-picker {
+    border-bottom: 1px solid #ccc;
+}
+#info-panel .title, #info-panel .time-picker, #info-panel .description {
+    padding: 10px;
+}
+.error-msg {
+    display: none;
+}
+.error-msg.open {
+    display: block;
+}
+.select-date {
+    text-align: center;
+    font-size: 1.4rem;
+}
+#description {
+    width: 100%;
+}
+
+#info-panel button {
+    display: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color:white;
+}
+/*使button依情況出現的方式*/
+#info-panel.new button.create, #info-panel.new button.cancel {
+    float: left;
+    display: block;
+    width: 50%;
+}
+
+#info-panel.update button.update, #info-panel.update button.cancel, #info-panel.update button.delete {
+    float: left;
+    display: block;
+    width: 50%;
+}
+
+#info-panel button.create, #info-panel button.update {
+    background-color: #74be00;
+}
+
+#info-panel.update button.delete {
+    width: 100%;
+    background-color: #C21717;
+}
+#info-panel button.cancel {
+    background-color: LightBlue;
+}
